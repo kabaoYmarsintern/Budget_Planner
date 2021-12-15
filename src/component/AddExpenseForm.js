@@ -13,7 +13,7 @@ const AddExpenseForm = (props) => {
     const expense = {
       id: uuidv4(),
       name,
-      cost: parseInt(cost)
+      cost: Number(cost)
     };
 
     dispatch({
