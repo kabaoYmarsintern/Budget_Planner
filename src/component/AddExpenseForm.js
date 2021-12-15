@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import AppContext from "../context/AppContext";
+import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
 
 const AddExpenseForm = (props) => {
@@ -13,7 +13,7 @@ const AddExpenseForm = (props) => {
     const expense = {
       id: uuidv4(),
       name,
-      cost: Number(cost)
+      cost: parseInt(cost)
     };
 
     dispatch({
